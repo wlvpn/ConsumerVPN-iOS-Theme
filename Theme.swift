@@ -33,20 +33,40 @@ final class Theme {
     static let settingsTabBarIcon = "settings_tab_bar"
 }
 
+
 // MARK: - Target Specific Colors
+
 extension UIColor {
     
-    // New colors for new design
-    
-    // Color used as background fill of views
-    static var viewBackground: UIColor {
-        return UIColor(hexColorString: "1F232F")
-    }
+    // MARK: - Common Color Choices
     
     // Color used to denote tappable controls
     static var appWideTint: UIColor {
         return UIColor(hexColorString: "4A90E2")
     }
+    
+    // Color used as background fill of views outside of login
+    static var viewBackground: UIColor {
+        return UIColor(hexColorString: "1F232F")
+    }
+    
+    // Color of primary accent text like "Public IP" and "Visible Location" in Dashboard
+    static var primaryText: UIColor {
+        return .white
+    }
+    
+    // Color of secondary accent text
+    static var secondaryText: UIColor {
+        return UIColor(hexColorString: "707070")
+    }
+    
+    // Color of the main font outside of the Dashboard's status texts
+    static var primaryFont: UIColor {
+        return .white
+    }
+    
+    
+    // MARK: - Tab Bar
     
     // Color of tab bar
     static var tabBarBg: UIColor {
@@ -63,106 +83,115 @@ extension UIColor {
         return .white
     }
     
-    static var primaryText: UIColor {
-        return .white
-    }
     
-    static var secondaryText: UIColor {
-        return UIColor(hexColorString: "707070")
-    }
+    // MARK: - Navigation Bar
     
-    static var loginIconColor: UIColor {
-        return .appWideTint
-    }
-    
+    // Color of navigation bars' background
     static var navigationBarBg: UIColor {
         return .viewBackground
     }
+    
+    // Color of navigation bar text
     static var navigationBarItemTint: UIColor {
         return .white
     }
     
-    static var serverListSectionBg: UIColor {
-        return UIColor(hexColorString: "424754")
-    }
     
-    static var checkmark: UIColor {
-        return .primaryAccent
-    }
+    // MARK: - Segmented Control
     
+    // Color of the selected segment in segment contols
     static var segmentedControlTint: UIColor {
         return .appWideTint
     }
     
-    static var cellSeparatorTint: UIColor {
-        return .serverListSectionBg
+    
+    // MARK: - Login Screen
+    
+    // Color of icons next to login fields
+    static var loginIconColor: UIColor {
+        return .appWideTint
     }
     
-    static var disconnectRed: UIColor {
-        return UIColor(hexColorString: "D0021B")
-    }
-    
+    // Color for top of background gradient
     static var loginViewGradientTop: UIColor {
         return UIColor(hexColorString: "090A0E")
     }
     
+    // Color for middle of background gradient
     static var loginViewGradientMid: UIColor {
         return UIColor(hexColorString: "4A4E5C")
     }
     
+    // Color for bottom of background gradient
     static var loginViewGradientBottom: UIColor {
         return UIColor(hexColorString: "202534")
     }
     
+    // Color for taller triangle
     static var loginViewTallTriangleBg: UIColor {
         return UIColor(hexColorString: "2F323F")
     }
     
+    // Color for shorter triangle
     static var loginViewShortTriangleBg: UIColor {
         return UIColor(hexColorString: "262a37")
     }
     
+    // Color for login text fields
     static var loginFieldText: UIColor {
         return .primaryText
     }
     
     
+    // MARK: - Dashboard
     
-    
-    
-    // Old colors, may or may not use these vars in the new design
-    
-    // Some Targets have a secondary accent color and others do not
-    // Some Targets have a secondary background color and others do not
-
-    static var primaryAccent: UIColor {
-        return UIColor(hexColorString: "FFFFFF")
-    }
-    static var selectedServer: UIColor {
-        return UIColor(hexColorString: "545454")
+    // Color for disconnect button
+    static var disconnectRed: UIColor {
+        return UIColor(hexColorString: "D0021B")
     }
     
-    // Buttons
     
-    // Backgrounds
+    // MARK: - Server List
+    
+    // Color of server list background
+    static var serverListSectionBg: UIColor {
+        return UIColor(hexColorString: "424754")
+    }
+    
+    // Color of checkmark when filtering servers
+    static var checkmark: UIColor {
+        return .appWideTint
+    }
+    
+    // Color for separator for server list table view
+    static var cellSeparatorTint: UIColor {
+        return .serverListSectionBg
+    }
+    
+    // Color of the server filter list background
     static var serverListBackground: UIColor {
         return UIColor(hexColorString: "0C0C0C")
     }
-    static var filterBackground: UIColor {
-        return .serverListBackground
-    }
     
-    // Cell colors
-    static var filterCell: UIColor {
-        return .selectedServer
-    }
     
-    // Fonts
-    static var primaryFont: UIColor {
-        return .white
-    }
+    // MARK: - Settings
+    
+    // Color of the text in the settings view
     static var optionsFont: UIColor {
         return .primaryFont
+    }
+    
+    
+    // MARK: - Old Colors
+    
+    // Old Colors; may or may not be used
+    static var filterCell: UIColor {
+        return UIColor(hexColorString: "545454")
+    }
+    
+    // Old Colors; may or may not be used
+    static var filterBackground: UIColor {
+        return .serverListBackground
     }
     
 }
