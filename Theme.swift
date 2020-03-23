@@ -31,6 +31,12 @@ final class Theme {
     static let dashboardTabBarIcon = "dashboard_tab_bar"
     static let serverListTabBarIcon = "server_list_tab_bar"
     static let settingsTabBarIcon = "settings_tab_bar"
+    
+    // Text for Privacy Disclosure Paragraphs When Installing VPN Profile
+    static let privacyP1 = "<Your company name> cares about our users privacy. That's why it's important we're clear about what you consent to give us while using <Your App Name>. We collect a small amount of personal and anonymously-aggregated data to deliver a reliable VPN service, specifically:"
+    static let privacyP2 = "• Your email address\n• Aggregated crash reports\n• Aggregated device information"
+    static let privacyP3 = "<Who this information is being shared with, if any>"
+    static let privacyP4 = "<Additional notes>"
 }
 
 
@@ -84,19 +90,6 @@ extension UIColor {
     }
     
     
-    // MARK: - Navigation Bar
-    
-    // Color of navigation bars' background
-    static var navigationBarBg: UIColor {
-        return .viewBackground
-    }
-    
-    // Color of navigation bar text
-    static var navigationBarItemTint: UIColor {
-        return .white
-    }
-    
-    
     // MARK: - Segmented Control
     
     // Color of the selected segment in segment contols
@@ -145,15 +138,57 @@ extension UIColor {
     
     // MARK: - Dashboard
     
+    // Color for top gradient of connected shield
+    static var shieldTopGradient: UIColor {
+        return .appWideTint
+    }
+    
+    // Color for bottom gradient of connected shield
+    static var shieldBottomGradient: UIColor {
+        return UIColor.appWideTint.colorDarker()
+    }
+    
+    static var shieldCheckmark: UIColor {
+        return .appWideTint
+    }
+    
+    // Color for connect button border
+    static var connectButtonBorder: UIColor {
+        return .appWideTint
+    }
+    
+    // Color for connect button background
+    static var connectButtonBg: UIColor {
+        return .clear
+    }
+    
+    // Color for connect button text
+    static var connectButtonText: UIColor {
+        return .appWideTint
+    }
+    
     // Color for disconnect button
     static var disconnectRed: UIColor {
         return UIColor(hexColorString: "D0021B")
     }
     
+    // Color for disconnect button borde
+    static var disconnectButtonBorder: UIColor {
+        return .disconnectRed
+    }
+    
+    static var disconnectButtonBg: UIColor {
+        return .clear
+    }
+    
+    static var disconnectButtonText: UIColor {
+        return .disconnectRed
+    }
+    
     
     // MARK: - Server List
     
-    // Color of server list background
+    // Color of server list table cell background
     static var serverListSectionBg: UIColor {
         return UIColor(hexColorString: "424754")
     }
@@ -173,12 +208,32 @@ extension UIColor {
         return UIColor(hexColorString: "0C0C0C")
     }
     
+    // Color of navigation bar background
+    static var serverNavigationBarBg: UIColor {
+        return .viewBackground
+    }
+    
+    // Color of navigation bar tint (including title)
+    static var serverNavigationBarItemTint: UIColor {
+        return .white
+    }
+    
     
     // MARK: - Settings
     
     // Color of the text in the settings view
-    static var optionsFont: UIColor {
+    static var settingsFont: UIColor {
         return .primaryFont
+    }
+    
+    // Color of navigation bars background
+    static var settingsNavigationBarBg: UIColor {
+        return .serverNavigationBarBg
+    }
+
+    // Color of navigation bar tint (including title)
+    static var settingsNavigationBarItemTint: UIColor {
+        return .serverNavigationBarItemTint
     }
     
     
@@ -194,4 +249,47 @@ extension UIColor {
         return .serverListBackground
     }
     
+}
+
+
+// MARK: - View Controller-Based Status Bar Style
+
+extension UIStatusBarStyle {
+    
+    static var loginStatusBar: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    static var dashboardStatusBar: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    static var serverListStatusBar: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    static var settingsStatusBar: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+}
+
+
+// MARK: - Utility extension for UIColor
+
+private extension UIColor {
+
+    func colorDarker() -> UIColor {
+        var hue: CGFloat = 0.0
+        var saturation: CGFloat = 0.0
+        var brightness: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+
+        if self.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
+            return UIColor(hue: hue, saturation: saturation, brightness: brightness - 0.2, alpha: alpha)
+        }
+        else {
+            return self
+        }
+    }
 }
