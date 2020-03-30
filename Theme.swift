@@ -15,6 +15,8 @@ final class Theme {
 
     static let forgotPasswordURL = "https://www.wlvpn.com"
     static let contactSupportURL = "https://www.wlvpn.com"
+    static let termsOfServiceURL = "https://www.wlvpn.com"
+    static let privacyPolicyURL = "https://www.wlvpn.com"
 
     static let usernameSuffix = "<supplied by WLVPN>"
     static let apiKey = "<supplied by WLVPN>"
@@ -37,6 +39,21 @@ final class Theme {
     static let privacyP2 = "• Your email address\n• Aggregated crash reports\n• Aggregated device information"
     static let privacyP3 = "<Who this information is being shared with, if any>"
     static let privacyP4 = "<Additional notes>"
+    
+    // MARK: - Hide/Show buttons
+    // Login
+    static let hideForgotPasswordButton = false
+    static let hideSignUpButton = false
+    // Signup
+    static let hideSignUpPasswordFields = false
+    static let hideToSButton = false
+    static let hidePrivacyPolicyButton = false
+    
+    // MARK: - Plans Text
+    static let plansDescription = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+    static let plansBullet1 = "Donec varius ante at dolore"
+    static let plansBullet2 = "Cras elementum risus vel irure"
+    static let plansBullet3 = "Donec varius ante at dolore"
 }
 
 
