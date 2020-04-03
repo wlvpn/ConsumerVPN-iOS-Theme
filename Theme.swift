@@ -56,9 +56,9 @@ final class Theme {
     static let plansBullet3 = "Donec varius ante at dolore"
     
     // MARK: - RevenueCat
-    static let RevenueCatAPIKey = "oMFIwRWyLahCLWYvknUvmnkCLkVEyySD"
-    static let RevenueCatConsoleDebugging = true
-    static let RevenueCatProductIdentifiers = ["1MONTHSUB"]
+    static let revenueCatAPIKey = ""
+    static let revenueCatConsoleDebugging = true
+    static let revenueCatProductIdentifiers = [""]
 }
 
 
