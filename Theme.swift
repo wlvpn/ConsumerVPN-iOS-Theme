@@ -156,6 +156,36 @@ extension UIColor {
     static var loginFieldText: UIColor {
         return .primaryText
     }
+	
+	
+	// MARK: - IAP Upgrade Screen
+	
+	static var iapViewGradientTop: UIColor {
+		return .loginViewGradientTop
+	}
+	
+	static var iapViewGradientMid: UIColor {
+		return .loginViewGradientMid
+	}
+	
+	static var iapViewGradientBottom: UIColor {
+		return .loginViewGradientBottom
+	}
+	
+	// Color for all text except:
+	static var iapPrimaryFontColor: UIColor {
+		return .loginFieldText
+	}
+	
+	// Color for "Premium"
+	static var iapSecondaryFontColor: UIColor {
+		return .loginFieldText
+	}
+	
+	// Color for plan subtitle text
+	static var iapTertiaryFontColor: UIColor {
+		return .loginFieldText
+	}
     
     
     // MARK: - Dashboard
