@@ -360,3 +360,15 @@ private extension UIColor {
         }
     }
 }
+
+extension DisconnectedShield {
+	class func drawCustom() {
+		//
+	}
+}
+
+extension ConnectedShield {
+	class func drawCustom() {
+		//
+	}
+}
