@@ -59,6 +59,9 @@ final class Theme {
     static let revenueCatAPIKey = ""
     static let revenueCatConsoleDebugging = true
     static let revenueCatProductIdentifiers = [""]
+	
+	// MARK: - Custom Shield
+	static let drawCustomShield = false
 }
 
 
@@ -191,18 +194,30 @@ extension UIColor {
     // MARK: - Dashboard
     
     // Color for top gradient of connected shield
-    static var shieldTopGradient: UIColor {
+    static var connectedShieldTopGradient: UIColor {
         return .appWideTint
     }
     
     // Color for bottom gradient of connected shield
-    static var shieldBottomGradient: UIColor {
+    static var connectedShieldBottomGradient: UIColor {
         return UIColor.appWideTint.colorDarker()
     }
     
-    static var shieldCheckmark: UIColor {
+    static var connectedShieldFill: UIColor {
         return .appWideTint
     }
+	
+	static var disconnectedShieldTopGradient: UIColor {
+		return .clear
+	}
+	
+	static var disconnectedShieldBottomGradient: UIColor {
+		return .clear
+	}
+	
+	static var disconnectedShieldFill: UIColor {
+		return .clear
+	}
     
     // Color for connect button border
     static var connectButtonBorder: UIColor {
