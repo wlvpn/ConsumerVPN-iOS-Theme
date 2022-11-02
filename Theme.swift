@@ -12,7 +12,8 @@ final class Theme {
     
     static let productName = "Consumer VPN"
     static let brandName = "Consumer VPN"
-
+    static let configName = "<Your company custom VPN configuration name>"
+    
     static let forgotPasswordURL = "https://www.wlvpn.com"
     static let contactSupportURL = "https://www.wlvpn.com"
     static let termsOfServiceURL = "https://www.wlvpn.com"
